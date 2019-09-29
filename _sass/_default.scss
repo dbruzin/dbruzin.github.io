@@ -16,15 +16,19 @@ h2 {
     color: $slate;
     font-size: 42px;
     line-height: 1.2em;
+    text-align: center;
 }
 
 a {
-    color: $slate;
-    text-decoration: none;
+    color: $iron;
+    // text-decoration: none;
 
     &:hover {
-        color: $iron;
+        color: $ridley;
     }
+}
+h1 a,h2 a {
+  text-decoration: none;
 }
 
 p {
@@ -103,7 +107,7 @@ strong {
 }
 
 .name {
-    margin: 2.5em auto 0;
+    margin: 3em auto 2em;
     text-align: center;
 }
 
@@ -151,6 +155,7 @@ li.menu__entry {
 .menu__entry a {
     color: $cloudy;
     padding: 3px 8px 3px;
+    text-decoration: none;
 
     &:hover {
         color: $slate;
@@ -209,11 +214,10 @@ li.menu__entry {
 }
 
 .post-teaser {
-    margin-bottom: 25px;
+    margin-bottom: 45px;
     overflow: hidden;
     position: relative;
     width: 100%;
-
 }
 
 .post-teaser_info {
@@ -434,6 +438,10 @@ li.menu__entry {
     margin: -25px auto 0;
 }
 
+.caption img {
+    margin-bottom: 15px;
+}
+
 .kicker {
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
@@ -549,7 +557,7 @@ li.menu__entry {
 .mm-tease {
     background-color: rgb(245, 244, 246);
     height: 587px;
-    margin-top: 30px;
+    padding-top: 80px;
     margin-bottom: 30px;
 
         & > div {
