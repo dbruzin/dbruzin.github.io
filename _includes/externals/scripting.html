@@ -1,0 +1,58 @@
+<!--
+// Colorfinder
+<script src="{{ "/assets/vendor/colorfinder.js" | prepend: site.baseurl }}"></script>
+<script>
+  var rgb = new ColorFinder().getMostProminentColor(document.getElementsByClassName('post-featured_image'));
+  document.getElementById("color").style.backgroundColor = 'rgb('+rgb.r+','+rgb.b+','+rgb.g+')';
+</script>
+-->
+
+<!-- video.js -->
+<script src="{{ "/assets/vendor/video.js/dist/alt/video.novtt.min.js" | prepend: site.baseurl }}"></script>
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- unslider -->
+<script src="{{ "/assets/vendor/unslider-master/dist/js/unslider.min.js" | prepend: site.baseurl }}"></script>
+
+<script>
+$(function(){
+    $('.auto-slider').unslider({
+        autoplay: true,
+        nav: true,
+        arrows: false
+    });
+    $('.content > p > img').parent().css({'width':'100%', 'margin':'0'});
+    $(".post-teaser_title").css({marginTop: "-30px"});
+    $(".post-teaser_title").hide();
+    $(".post-teaser_subtitle").hide();
+    $(".post-teaser_overlay").hide();
+    $("div.post-teaser_info").hover(function(){
+        $(this).fadeIn();
+        $(this).children(".post-teaser_title")
+            .fadeIn({queue: false})
+            .animate({marginTop: "0"}, 300);
+        $(this).children(".post-teaser_subtitle")
+            .fadeIn({queue: false})
+            .animate({ opacity: 0, marginLeft: "-30px" }, 0);
+        $(this).children(".post-teaser_subtitle")
+            .delay(150)
+            .animate({opacity: 1, marginLeft: 0}, 300);
+        $(this).parent().children(".post-teaser-wrapper").children(".post-teaser_overlay").attr('id', 'color').fadeIn();
+        $(this).parent().children(".post-teaser-wrapper").children("video")[0].play();
+
+    }, function(){
+        $(this).children(".post-teaser_subtitle")
+            .fadeOut({queue: false})
+            .animate({opacity: 0});
+        $(this).children(".post-teaser_title")
+            .fadeOut({queue: false})
+            .animate({marginTop: "-30px"});
+        $(this).parent().children(".post-teaser-wrapper").children(".post-teaser_overlay").removeAttr('id', 'color').fadeOut(200);
+        var el = $(this).parent().children(".post-teaser-wrapper").children("video")[0];
+        el.pause();
+//        el.currentTime = 0;
+    });
+});
+</script>

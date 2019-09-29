@@ -1,0 +1,23 @@
+---
+sitemap:
+  exclude: 'yes'
+---
+@charset "utf-8";
+
+/* =Colors */
+$dorian: #f0f0f0;
+$doriano: #F5F5F5;
+$light: #E5E5E5;
+$cloudy: #828282;
+$gunship: #676767;
+$slate: #454545;
+$iron: #333333;
+
+$ridley: #ee493e;
+
+
+@import
+    "mixins",
+    "default",
+    "404"
+;

@@ -1,0 +1,16 @@
+<div class="about">
+    <div class="about__devider">*****</div>
+    <div class="about__text">
+        {% if page.next %}
+          <a href="{{ page.next.url }}">Prev</a>
+        {% endif %}
+        {% if page.next and page.previous %}
+         |
+        {% endif %}
+        {% if page.previous %}
+          <a href="{{ page.previous.url }}">Next</a>
+        {% endif %}
+<!--        Written by <strong> {% if page.author.fullname %} {{ page.author.fullname }} {% else %} {{ site.author.fullname }} {% endif %}</strong>
+        on <strong>{{ page.date | date: "%d %B %Y" }}</strong> -->
+    </div>
+</div>

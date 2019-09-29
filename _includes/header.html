@@ -1,0 +1,28 @@
+<header class="header">
+    <div class="navigation">
+        <ul class="menu">
+            <li class="menu__entry"><a href="{{ '/profile' | prepend: site.baseurl }}">Profile</a></li>
+            <li class="menu__entry"><a href="{{ '/assets/download/resume-klaneHarding.pdf' | prepend: site.baseurl }}">Resume</a></li>
+        </ul>
+        <div class="name">
+            <h1><a href="/" class="logo">{{ site.title }}</a></h1>
+            <h2 class="subtitle">{{ site.subtitle }}</h2>
+        </div>
+    </div>
+
+    {% if site.author.github or site.author.twitter %}
+        <ul class="social-links">
+            {% if site.author.github %}
+                <a href="https://github.com/{{ site.author.github }}" class="social-links__entry" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            {% endif %}
+
+            {% if site.author.twitter %}
+                <a href="https://twitter.com/{{ site.author.twitter }}" class="social-links__entry" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            {% endif %}
+        </ul>
+    {% endif %}
+</header>

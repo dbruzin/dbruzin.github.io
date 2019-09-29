@@ -1,0 +1,39 @@
+---
+layout: page
+title: Work
+subtitle:
+sitemap:
+  priority: 0.9
+---
+
+<ul class="list-posts">
+    {% for post in site.posts %}
+        <li class="post-teaser">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+                <div class="post-teaser_info">
+                    <h2 class="post-teaser_title">{{ post.title }}</h2>
+                    <h3 class="post-teaser_subtitle">{{ post.subtitle }}</h3>
+                    <!-- {% if post.tags %}
+                    {% assign tags_list = post.tags %}
+                    <ul>
+                        {% for tag in tags_list %}
+                            <li class="post-teaser_tag">{{ tag | upcase }}</li>
+                        {% endfor %}
+                    </ul> -->
+                </div>
+                <div class="post-teaser-wrapper">
+                    <div class="post-teaser_overlay"></div>
+                    {% if post.preview_loop %}
+                        <video preload="auto" loop>
+                            <source src="{{ site.baseurl }}/assets/mp4/{{ post.preview_loop }}" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        {% elsif post.featured_image %}
+                            <img class="post-featured_image" src="{{ site.baseurl }}/assets/img/{{ post.featured_image }}" title="{{ post.featured_image }}"/>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
