@@ -12,7 +12,10 @@ featured_image: lws-hypermade-fi.jpg
 
 <!-- Shot in one take on an iPhone for Instagram. -->
 
-<div class="embed-container"><iframe src="http://player.vimeo.com/video/159876376?title=0&amp;byline=0&amp;portrait=0&amp;color=cc0000" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+<video autoplay controls poster="{{ site.baseurl }}/assets/preplay/lws-hypermade-preplay.jpg">
+    <source src="{{ site.baseurl }}/assets/mp4/lws-hypermade.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
 
 > ### Awards
 - 2016 NY Addy – Silver
