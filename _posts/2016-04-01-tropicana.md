@@ -21,26 +21,12 @@ galleries:
 ## Tropicana Station Dominations
 
 ![Tropicana 01](/assets/img/trp-01-city_of_8.png "City of 8 million and you run into that guy")
-
 ![Tropicana 02](/assets/img/trp-02-guy_with.png "Guy with a staring problem chooses you")
-
 
 > The series is featured in Lurzer’s Int’l ARCHIVE Vol. 3-2012
 {: .alert}
 
 <!-- {% include gallery.html  gallery=1 %} -->
-
-<!-- <div class="row">
-    <div class="column large-6" autoplay muted loop>
-        <source src="{{ site.baseurl }}/assets/mp4/mm-eib-texting.mp4"  type="video/mp4" />
-        Your browser does not support the video tag.
-    </div>
-    <div class="column large-5 large-offset-1">
-        <div class="vert-align">
-            <p class="kicker">We teased the launch with Red looking for love (in all the wrong places). He meets Liz on Tinder and tries to play it cool. Their relationship developed and unfolded little by little across M&M’s social media channels.</p>
-        </div>
-    </div>
-</div> -->
 
 ![Tropicana 03](/assets/img/trp-03-downtown.png "You could have sworn you read downtown")
 
@@ -79,6 +65,13 @@ Photographers: Larry Sillen, Schneur Menaker
 > These ads are featured in Lurzer’s Int’l ARCHIVE Vol. 6-2011
 {: .alert}
 
-![Tropicana Newsprint 01](/assets/img/trp_nyc24.jpg "Your alarm clock is the noise outside your window")
+<div class="auto-slider">
+    <ul>
+    	<li><img src="{{ "/assets/img/trp_nyc24.jpg" | prepend: site.baseurl }}" alt="Your alarm clock is the noise outside your window"></li>
+    	<li><img src="{{ "/assets/img/trp_nyc23.jpg" | prepend: site.baseurl }}" alt="Parades were fun the first 10 times they made you late"></li>
+    	<li><img src="{{ "/assets/img/trp_nyc25.jpg" | prepend: site.baseurl }}" alt="Ten minutes in line for breakfast and it's cash only"></li>
+    </ul>
+</div>
+<!-- ![Tropicana Newsprint 01](/assets/img/trp_nyc24.jpg "Your alarm clock is the noise outside your window")
 ![Tropicana Newsprint 02](/assets/img/trp_nyc23.jpg "Parades were fun the first 10 times they made you late")
-![Tropicana Newsprint 03](/assets/img/trp_nyc25.jpg "Ten minutes in line for breakfast and it's cash only")
+![Tropicana Newsprint 03](/assets/img/trp_nyc25.jpg "Ten minutes in line for breakfast and it's cash only") -->
